@@ -1,0 +1,27 @@
+# ---------------- Python ----------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables
+.env
+
+# ---------------- ML / Data ----------------
+models/
+data/
+local_storage/
+*.pth
+*.log
+
+# ---------------- Node (if used) ----------------
+node_modules/
+
+# ---------------- OS ----------------
+.DS_Store
+Thumbs.db

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropMind AI Dashboard</title>
+    <meta name="description" content="AI-powered crop disease detection and treatment recommendations for farmers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="assets/icons/cropmind logo.png" alt="CropMind Logo">
+            <div class="logo-text-wrapper">
+                <div class="logo-text">CropMind AI</div>
+                <div class="logo-sub">AI for Healthy Crops</div>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active" id="nav-scan">
+                <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <path d="M9 3v18"></path>
+                    <path d="M14 9h4"></path>
+                    <path d="M14 15h4"></path>
+                </svg>
+                <span>Scan Crop</span>
+            </a>
+            <a href="#" class="nav-item" id="nav-history">
+                <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>History</span>
+            </a>
+            <a href="#" class="nav-item" id="nav-settings">
+                <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                </svg>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="sidebar-footer-icon">
+                <img src="assets/icons/cropmind logo.png" alt="Icon">
+            </div>
+            <div class="sidebar-footer-text">
+                Healthy Crops,<br>Better Harvests.
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-wrapper">
+        <header class="topbar">
+            <div class="mobile-logo hidden">
+                <img src="assets/icons/cropmind logo.png" alt="CropMind Logo" class="mobile-logo-img">
+                <span class="logo-text">CropMind AI</span>
+            </div>
+
+            <div class="topbar-actions">
+                <div class="lang-selector">
+                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                    </svg>
+                    English
+                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">JW</div>
+                    <div class="user-info">
+                        <span class="user-name">Joshua Winyelsum</span>
+                        <span class="user-role">Farmer</span>
+                    </div>
+                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+
+            <!-- ===== LEFT COLUMN (Scan) ===== -->
+            <div class="left-col" id="scan-left">
+                <section class="card">
+
+                    <!-- UPLOAD STATE (default visible) -->
+                    <div class="state-section" id="upload-state">
+                        <header class="section-header">
+                            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <h2>Upload Leaf Image</h2>
+                        </header>
+
+                        <div class="upload-zone" id="upload-zone">
+                            <!-- Default placeholder -->
+                            <div id="upload-placeholder">
+                                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                                <p class="upload-text">Drag and drop leaf image here</p>
+                                <p class="upload-subtext">or use the buttons below</p>
+
+                                <div class="upload-actions">
+                                    <button class="btn-outline" id="btn-take-photo">
+                                        <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <path
+                                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                                            </path>
+                                            <circle cx="12" cy="13" r="4"></circle>
+                                        </svg>
+                                        Take Photo
+                                    </button>
+                                    <button class="btn-outline" id="btn-upload-image">
+                                        <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                            <polyline points="21 15 16 10 5 21"></polyline>
+                                        </svg>
+                                        Upload Image
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Image preview (hidden until file selected) -->
+                            <div id="upload-preview" class="hidden">
+                                <div class="preview-image-wrapper">
+                                    <img id="preview-image" src="" alt="Selected image preview">
+                                    <button class="close-btn" id="btn-remove-preview" aria-label="Remove image">
+                                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="preview-filename" id="preview-filename"></p>
+                            </div>
+
+                            <!-- Camera View -->
+                            <div id="camera-view" class="hidden" style="width: 100%;">
+                                <div class="camera-wrapper"
+                                    style="position: relative; border-radius: var(--radius-lg); overflow: hidden; background: #000;">
+                                    <video id="camera-video" autoplay playsinline
+                                        style="width: 100%; max-height: 300px; display: block; object-fit: cover;"></video>
+                                    <canvas id="camera-canvas" class="hidden"></canvas>
+                                </div>
+                                <div class="camera-actions"
+                                    style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                                    <button class="btn-primary" id="btn-snap-photo" style="flex: 1;">
+                                        <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <path
+                                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                                            </path>
+                                            <circle cx="12" cy="13" r="4"></circle>
+                                        </svg>
+                                        Snap
+                                    </button>
+                                    <button class="btn-outline" id="btn-cancel-camera" style="flex: 1;">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="file" id="file-input" accept="image/*" class="hidden">
+
+                        <button class="btn-primary" id="btn-analyze" disabled>
+                            <svg class="icon-md" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                            <span id="btn-analyze-text">Analyze Crop</span>
+                        </button>
+                    </div>
+
+                    <!-- RESULTS STATE (hidden until analysis completes) -->
+                    <div class="state-section hidden" id="results-state">
+                        <div class="preview-area">
+                            <h3 class="preview-label">Uploaded Image</h3>
+                            <div class="image-container">
+                                <img id="result-image" src="" alt="Analyzed Crop Leaf">
+                                <button class="close-btn" id="btn-close-result" aria-label="Reset scan">
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <h3 class="preview-label" style="margin-top: 1rem;">Analysis Result</h3>
+                        <div class="result-header">
+                            <div class="result-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path
+                                        d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="result-title" id="result-disease">&mdash;</div>
+                        </div>
+
+                        <div id="result"
+                            style="margin: 0.5rem 0; font-size: 1.1rem; font-weight: 600; color: var(--primary-green);">
+                        </div>
+
+                        <!-- OOD Warning Banner — shown when model rejects image as out-of-distribution -->
+                        <div id="ood-warning-banner" class="hidden" style="
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 0.65rem;
+                            background: linear-gradient(135deg, rgba(245,158,11,0.15) 0%, rgba(217,119,6,0.1) 100%);
+                            border: 1px solid rgba(245,158,11,0.45);
+                            border-radius: 10px;
+                            padding: 0.85rem 1rem;
+                            margin-bottom: 1rem;
+                            font-size: 0.875rem;
+                            line-height: 1.5;
+                            color: #92400e;
+                        ">
+                            <svg style="flex-shrink:0;margin-top:1px;" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                </path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            <div>
+                                <strong style="display:block;margin-bottom:0.2rem;">Unsupported Crop Detected</strong>
+                                <span id="ood-warning-text">This image does not appear to be a supported crop. Please
+                                    upload a tomato leaf image.</span>
+                            </div>
+                        </div>
+
+                        <dl class="stats-grid">
+                            <div class="stat-item">
+                                <dt class="stat-label">Confidence</dt>
+                                <dd class="stat-value green" id="result-confidence">&mdash;</dd>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <dt class="stat-label">Severity</dt>
+                                <dd class="stat-value"><span class="dot" id="result-severity-dot"></span> <span
+                                        id="result-severity">&mdash;</span></dd>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <dt class="stat-label">Category</dt>
+                                <dd class="stat-value" id="result-category" style="font-size:1rem; font-weight:500;">
+                                    &mdash;</dd>
+                            </div>
+                        </dl>
+
+                        <div class="info-banner">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            This is an AI prediction. Please validate in field when possible.
+                        </div>
+
+                        <button class="btn-primary btn-new-scan" id="btn-new-scan" style="margin-top: 1rem;">
+                            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <span>Scan New Image</span>
+                        </button>
+                    </div>
+
+                </section>
+            </div>
+
+            <!-- ===== RIGHT COLUMN (Treatments) — hidden until analysis ===== -->
+            <div class="right-col hidden" id="treatments-section">
+                <header class="section-header" style="color: var(--primary-green); margin-bottom: 0.5rem;">
+                    <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="8" width="18" height="12" rx="2" ry="2"></rect>
+                        <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="12" y1="11" x2="12" y2="17"></line>
+                        <line x1="9" y1="14" x2="15" y2="14"></line>
+                    </svg>
+                    <h2>Treatment &amp; Recommendation</h2>
+                </header>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Recommended treatments
+                    for this disease</p>
+
+                <div id="treatments-container">
+                    <ul id="treatment-list" class="bullet-list">
+                        <!-- Dynamically populated by app.js -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ===== HISTORY VIEW ===== -->
+            <div id="history-view" class="full-view hidden">
+                <section class="card">
+                    <header class="section-header">
+                        <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <h2>Scan History</h2>
+                    </header>
+                    <div id="history-list" class="history-list"></div>
+                </section>
+            </div>
+
+            <!-- ===== SETTINGS VIEW ===== -->
+            <div id="settings-view" class="full-view hidden">
+                <section class="card">
+                    <header class="section-header">
+                        <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                        <h2>Settings</h2>
+                    </header>
+                    <div class="settings-content">
+
+                        <div class="settings-group">
+                            <div class="settings-group-title">Preferences</div>
+                            <div class="setting-item">
+                                <div class="setting-label-group">
+                                    <div class="setting-label">Language</div>
+                                    <div class="setting-desc">Choose your preferred language</div>
+                                </div>
+                                <select class="setting-select" id="setting-lang">
+                                    <option value="en">English</option>
+                                    <option value="es">Español</option>
+                                    <option value="fr">Français</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-label-group">
+                                    <div class="setting-label">Dark Mode</div>
+                                    <div class="setting-desc">Switch to a darker theme for night use</div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="setting-theme">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <div class="settings-group-title">Notifications</div>
+                            <div class="setting-item">
+                                <div class="setting-label-group">
+                                    <div class="setting-label">Push Notifications</div>
+                                    <div class="setting-desc">Receive alerts for crop health updates</div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="setting-push" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-label-group">
+                                    <div class="setting-label">Email Reports</div>
+                                    <div class="setting-desc">Get weekly summaries of your scans</div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="setting-email">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <div class="settings-group-title">About</div>
+                            <div class="app-info">
+                                <div class="app-info-icon">
+                                    <img src="assets/icons/cropmind logo.png" alt="App Logo">
+                                </div>
+                                <div class="app-info-details">
+                                    <div class="app-info-name">CropMind AI</div>
+                                    <div class="app-info-version">Version 1.0.0</div>
+                                </div>
+                                <button class="btn-outline"
+                                    style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Update</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Toast notification container -->
+    <div id="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
