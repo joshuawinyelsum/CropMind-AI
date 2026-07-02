@@ -6,12 +6,12 @@ def predict(img):
     result = predict_image(img)
     return result
 
-interface = gr.Interface(
+demo = gr.Interface(
     fn=predict,
     inputs=gr.Image(type="pil"),
     outputs="text",
     title="CropMind AI",
-    description="Plant disease detection from crop leaf images"
+    description="Upload a crop leaf image to detect disease"
 )
 
-interface.launch()
+demo.launch()
