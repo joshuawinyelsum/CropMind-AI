@@ -1,17 +1,13 @@
 import gradio as gr
-from PIL import Image
-from app.inference import predict_image
 
 def predict(img):
-    result = predict_image(img)
-    return result
+    return "SPACE IS NOW RUNNING ✔"
 
 demo = gr.Interface(
     fn=predict,
     inputs=gr.Image(type="pil"),
-    outputs="text",
-    title="CropMind AI",
-    description="Upload a crop leaf image to detect disease"
+    outputs="text"
 )
 
+# IMPORTANT: MUST BE THIS EXACT VARIABLE NAME
 demo.launch()
