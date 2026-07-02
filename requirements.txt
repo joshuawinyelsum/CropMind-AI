@@ -1,7 +1,9 @@
-fastapi
-uvicorn
-python-multipart
+gradio
 torch
 torchvision
 pillow
+numpy
+fastapi
+uvicorn
+python-multipart
 requests
