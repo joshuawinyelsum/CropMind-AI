@@ -8,7 +8,7 @@ sdk_version: 4.0.0
 app_file: app.py
 pinned: false
 ---
-
+ 
 # CropMind AI
 
 CropMind AI is a smart agricultural assistant application designed to help farmers classify crop diseases from images. It uses a custom-trained ResNet34 model served by a FastAPI backend and a clean, responsive frontend.
