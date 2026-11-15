@@ -1,4 +1,4 @@
-----
+---
 title: CropMind AI
 emoji: 🌱
 colorFrom: green
@@ -7,7 +7,7 @@ sdk: gradio
 sdk_version: 4.0.0
 app_file: app.py
 pinned: false
-----
+---
  
 # CropMind AI
 
